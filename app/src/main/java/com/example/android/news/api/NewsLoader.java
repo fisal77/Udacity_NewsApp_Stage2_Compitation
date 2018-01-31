@@ -215,7 +215,7 @@ public class NewsLoader extends AsyncTaskLoader<List<NewsItem>> {
                 value.put(Contract.Entry.COLUMN_AUTHOR , author);
                 // Create a new {@link NewsItem} object with the title, section, author, date,
                 // and webUrl from the JSON response, and add it to the list of newsList.
-                newsList.add(new NewsItem(title, section, author, date, webUrl));
+                newsList.add(new NewsItem(title, section, author, date, webUrl, thumbnail));
                 sqlitedatabase.insert(Contract.Entry.TABLE_NAME , null , value);
             }
 

@@ -6,13 +6,15 @@ public class NewsItem {
     private String author;
     private String date;
     private String webUrl;
+    private String thumbnail;
 
-    public NewsItem(String title, String section, String author, String date, String webUrl) {
+    public NewsItem(String title, String section, String author, String date, String webUrl, String thumbnail) {
         this.title = title;
         this.section = section;
         this.author = author;
         this.date = date;
         this.webUrl = webUrl;
+        this.thumbnail = thumbnail;
     }
 
     public String getTitle() {
@@ -33,5 +35,9 @@ public class NewsItem {
 
     public String getWebUrl() {
         return webUrl;
+    }
+
+    public String getThumbnail() {
+        return thumbnail;
     }
 }

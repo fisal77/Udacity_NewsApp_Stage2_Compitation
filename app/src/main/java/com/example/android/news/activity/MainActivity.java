@@ -89,7 +89,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     String date = cursor.getString(cursor.getColumnIndex(Contract.Entry.COLUMN_WEB_PUBLICATION_DATE));
                     String section = cursor.getString(cursor.getColumnIndex(Contract.Entry.COLUMN_SECTION));
                     String author = cursor.getString(cursor.getColumnIndex(Contract.Entry.COLUMN_AUTHOR));
-                    Items.add(new NewsItem(title , section , author , date , url));
+                    String thumbnail = cursor.getString(cursor.getColumnIndex(Contract.Entry.COLUMN_THUMBNAIL)); // TODO - Add new image column as Blob
+                    Items.add(new NewsItem(title , section , author , date , url, thumbnail));
                 }while (cursor.moveToNext());
                 newsAdapter.clear();
                 newsAdapter.addAll(Items);

@@ -168,6 +168,8 @@ public class QueryUtils {
                 String section = newsItem.getString("sectionName");
                 String date = newsItem.getString("webPublicationDate");
                 String webUrl = newsItem.getString("webUrl");
+                JSONObject newsPicture = newsItem.getJSONObject("fields");
+                String thumbnail = newsPicture.getString("thumbnail");
                 JSONArray tagsArray = newsItem.getJSONArray("tags");
                 String author = "";
                 int numberOfContributors = tagsArray.length();
@@ -189,7 +191,7 @@ public class QueryUtils {
 
                 // Create a new {@link NewsItem} object with the title, section, author, date,
                 // and webUrl from the JSON response, and add it to the list of newsList.
-                newsList.add(new NewsItem(title, section, author, date, webUrl));
+                newsList.add(new NewsItem(title, section, author, date, webUrl, thumbnail));
             }
 
         } catch (JSONException e) {
