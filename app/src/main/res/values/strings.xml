@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">News</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="no_news_stories_found">No news stories found.</string>
+
+    <string name="main_menuitem1title">Settings</string>
+
+    <string name="settings_activityname">News Settings</string>
+
+    <string name="settings_preference1key">settings_preference2</string>
+    <string name="settings_preference1title">Search For</string>
+    <string name="settings_preference1dafaultvalue">Ozone Layer</string>
+
+    <string name="settings_preference2key">settings_preference1</string>
+    <string name="settings_preference2title">Order By</string>
+    <string name="settings_preference2dafaultvalue">newest</string>
+
+
+</resources>
